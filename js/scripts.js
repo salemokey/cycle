@@ -10,7 +10,13 @@
     console.log (crateMonitorLink(4004));
 
     function task2 (order) {
-        return `Заказ покупателя ${order.fio} составил ${order.price*order.quantity}`}
+        function task3 (newPrice) {
+            let oldPrice = order.price * order.quantity;
+            let skidka = ((oldPrice - newPrice)*100/oldPrice);
+            return `Заказ покупателя ${order.fio} составил ${oldPrice}, скидка составила ${skidka}%`;
+        }  
+            return task3(1800);
+    }
         let orders= [
             {
                     fio:"Ivan",
@@ -32,5 +38,7 @@
             } ];
             for (elem of orders)
             console.log (task2(elem));
-
+            
+            
         
+            
