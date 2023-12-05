@@ -9,9 +9,8 @@
     createNotebookLink = linkTovar ('notebook');
     console.log (crateMonitorLink(4004));
 
-    function task2 () {
-        function skidka
-        return `Заказ покупателя ${orders.fio} составил ${orders.price*orders.quantity}`}
+    function task2 (order) {
+        return `Заказ покупателя ${order.fio} составил ${order.price*order.quantity}`}
         let orders= [
             {
                     fio:"Ivan",
@@ -30,6 +29,8 @@
                 tovar:"connector",
                 price:100,
                 quantity:100
-            } ]
+            } ];
+            for (elem of orders)
+            console.log (task2(elem));
 
         
