@@ -39,6 +39,21 @@
             for (elem of orders)
             console.log (task2(elem));
             
-            
-        
+            function Menu(...navList) {
+                this.navList = navList;
+                
+                this.wrapperA = function(...context) {
+                  return this.navList.map((elem, index) => `<a href='${elem}'>${context[index]}</a>`);
+                }
+              }
+              
+              let mainMenu = new Menu("home.html", "services.html", "price.html", "about.html");
+              for (elem of mainMenu.navList)
+                console.log(elem);
+              console.log(mainMenu.wrapperA("Home", "Services", "Price", "About"));
+              
+              let footerMenu = new Menu("newPage.html", "checkPage.html", "seoPage.html");
+              for (elem of footerMenu.navList)
+                console.log(elem);
+              console.log(footerMenu.wrapperA("New Page", "Check Page", "SEO Page"));
             
